@@ -1,0 +1,24 @@
+{
+  "dependencies": {
+    "nodemon": "^2.0.16"
+  },
+  "name": "sadiya",
+  "description": "Clinic management website",
+  "version": "1.0.0",
+  "main": "app.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alex-abanobi/sadiya.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alex-abanobi/sadiya/issues"
+  },
+  "homepage": "https://github.com/alex-abanobi/sadiya#readme"
+}
