@@ -83,8 +83,9 @@ body,html{
 }
 
 .links{
-    margin-right: 0.8rem;
-    text-decoration: underline;
+    margin-right: 4rem;
+    /* text-decoration: underline; */
+    border-bottom: 1px solid black;
 }
 .links:hover{
     color: blue;
