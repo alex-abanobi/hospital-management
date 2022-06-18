@@ -14,20 +14,26 @@ body,html{
     width: 100%;
 }
 
+.maincontent{
+    height: 100%;
+    width: 60%;
+}
+
+
 .toprow{
-    height: 30vh;
-    width: 100vw;
-    box-shadow: 2px 2px 2px grey;
+    height: 30%;
+    width: 100%;
+    box-shadow: 1px 1px 12px rgb(234, 234, 234);
 }
 
 .middlerow{
-    height: 40vh;
-    width: 100vw;
+    height: 40%;
+    width: 100%;
 }
 
 .bottomrow{
-    height: 30vh;
-    width: 100vw;
+    height: 30%;
+    width: 100%;
 }
 
 .logo{
