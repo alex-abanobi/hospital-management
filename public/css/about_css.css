@@ -1,0 +1,70 @@
+*{
+    font-family: 'Raleway', sans-serif;
+    /* border: 1px solid red; */
+    box-sizing: border-box;
+}
+
+body,html{
+    margin: 0;
+    padding: 0;
+}
+
+.main{
+    height: 100%;
+    width: 100%;
+}
+
+.toprow{
+    height: 30vh;
+    width: 100vw;
+    box-shadow: 2px 2px 2px grey;
+}
+
+.middlerow{
+    height: 40vh;
+    width: 100vw;
+}
+
+.bottomrow{
+    height: 30vh;
+    width: 100vw;
+}
+
+.logo{
+    width: 40%;
+    height: 80%;
+    margin-right: 0.5rem;
+}
+
+.searchdiv{
+    width: 40%;
+    height: 40%;
+    /* margin-right: 2rem; */
+}
+
+.searchbar{
+    width: 80%;
+    height: 80%;
+    margin-left: 2rem;
+}
+
+.toptoprow{
+    width: 100%;
+    height: 50%;
+}
+
+.bottomtoprow{
+    width: 100%;
+    height: 50%;
+}
+
+.toptoprowleft{
+    width: 50%;
+    height: 100%;
+}
+
+
+.toptoprowright{
+    width: 40%;
+    height: 100%;
+}
