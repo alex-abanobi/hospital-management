@@ -100,3 +100,9 @@ body,html{
     width: 100%;
     height: 100%;
 }
+
+.appointmentbutton1{
+    width: 50%;
+    height: 50%;
+    font-size: 1.5rem;
+}
