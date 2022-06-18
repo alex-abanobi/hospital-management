@@ -7,6 +7,8 @@
 body,html{
     margin: 0;
     padding: 0;
+    height: 100vh;
+    width: 100vw;
 }
 
 .main{
@@ -43,13 +45,13 @@ body,html{
 }
 
 .searchdiv{
-    width: 40%;
+    width: 60%;
     height: 40%;
     /* margin-right: 2rem; */
 }
 
 .searchbar{
-    width: 80%;
+    width: 100%;
     height: 80%;
     margin-left: 2rem;
 }
@@ -57,6 +59,7 @@ body,html{
 .toptoprow{
     width: 100%;
     height: 50%;
+    padding: 0 1rem;
 }
 
 .bottomtoprow{
@@ -65,7 +68,7 @@ body,html{
 }
 
 .toptoprowleft{
-    width: 50%;
+    width: 60%;
     height: 100%;
 }
 
@@ -73,4 +76,8 @@ body,html{
 .toptoprowright{
     width: 40%;
     height: 100%;
+}
+
+.callbutton{
+    margin-left: 1rem;
 }
