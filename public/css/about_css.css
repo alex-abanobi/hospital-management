@@ -81,3 +81,12 @@ body,html{
 .callbutton{
     margin-left: 1rem;
 }
+
+.links{
+    margin-right: 0.8rem;
+    text-decoration: underline;
+}
+.links:hover{
+    color: blue;
+    cursor:pointer;
+}
