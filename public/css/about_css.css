@@ -1,5 +1,6 @@
 *{
-    font-family: 'Raleway', sans-serif;
+    /* font-family: 'Raleway', sans-serif; */
+    font-family: 'Nunito', sans-serif;
     /* border: 1px solid red; */
     box-sizing: border-box;
 }
@@ -134,7 +135,7 @@ body,html{
 .servicesdropdown-active:hover{
     height: 19rem;
     opacity: 0.99;
-    transition: opacity 0.4s;
+    transition: opacity 0.5s;
 }
 
 .servicesdropdown-inactive{
