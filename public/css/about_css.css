@@ -89,7 +89,7 @@ body,html{
     text-align: center;
 }
 .links:hover{
-    color: blue;
+    color: rgb(54, 54, 54);
     cursor:pointer;
 }
 .links:nth-child(3){
@@ -119,14 +119,22 @@ body,html{
     justify-content: flex-start;
     align-items: flex-start;
     position: absolute;
-    top: 11.4rem;
+    top: 8.8rem;
     left: 51.9rem;
     width: 15rem;
-    height: auto;
+    height: 0;
     z-index: 100;
     background-color: white;
     box-shadow: 1px 1px 2px #eaeaea;
+    /* transition: top 2s; */
     /* border: 1px solid rebeccapurple; */
+    opacity: 0;
+}
+
+.servicesdropdown-active:hover{
+    height: 19rem;
+    opacity: 0.99;
+    transition: opacity 0.4s;
 }
 
 .servicesdropdown-inactive{
