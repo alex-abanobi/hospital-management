@@ -10,7 +10,7 @@ const mongoose = require('mongoose') // in this place i am requiring the mongoos
 const methodOverride = require('method-override');
 //const Campground = require('./models/campground') // here i am requiring a certain file (class) called campground.js in the models directory
     // that campground file exports a mongoose schema class. more or less like returns that mongoose schema class
-
+let loginresult = ""
 mongoose.connect('mongodb://localhost:27017/zankli-pp', { // create and connect to this database
     useNewUrlParser: true,
     useUnifiedTopology: true
@@ -42,7 +42,22 @@ app.set('views', path.join(__dirname, 'views')); // here tell the app that the v
 
 
 app.get('/', (req, res) => {
-    res.render('about');
+    let loginresult = ""
+    res.render('login', { loginresult })
+})
+
+app.post('/about', (req, res) => {
+
+    if (req.body.username == "sadiya" && req.body.password == "zankli123"){
+        loginresult = ""
+        res.render('about', { loginresult })
+    }
+    else{
+        loginresult = "Wrong username or password"
+        res.redirect('/')
+      
+    } 
+    
 })
 
 
