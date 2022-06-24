@@ -46,11 +46,30 @@ app.get('/', (req, res) => {
     res.render('login', { loginresult })
 })
 
-app.post('/about', (req, res) => {
+app.get('/signup', (req, res) => {
+    res.render('signup')
+})
 
-    if (req.body.username == "sadiya" && req.body.password == "zankli123"){
+app.post('/home', (req, res) => {
+
+    if (req.body.username == "sadiya@gmail.com" && req.body.password == "zankli123"){
         loginresult = ""
-        res.render('about', { loginresult })
+        res.render('home', { loginresult })
+    }
+    else{
+        loginresult = "Wrong username or password"
+        res.redirect('/')
+      
+    } 
+    
+})
+
+
+app.post('/verifyuser', (req, res) => {
+
+    if (req.body.email == "sadiya@gmail.com" && req.body.password == "zankli123"){
+        loginresult = ""
+        res.render('home', { loginresult })
     }
     else{
         loginresult = "Wrong username or password"

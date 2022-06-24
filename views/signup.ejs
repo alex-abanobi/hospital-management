@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup - Zankli Patient Portal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400;1,500&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;1,200;1,300;1,400;1,500&display=swap"
+        rel="stylesheet">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/signup.css">
+</head>
+
+<body>
+    <!-- <h1>Log in here !!!</h1> -->
+    <section class="main d-flex flex-row justify-content-center align-items-start">
+        <section class="maincontent d-flex flex-column justify-content-start align-items-center">
+            <section class="signuphead d-flex flex-column justify-content-center align-items-center">
+                <img src="pictures/zanklilogo3.png" alt="Logo of Zankli Patient Portal" class="logo">
+                <iframe src="https://giphy.com/embed/lo9OHBZzaM7W8Lg5L0" width="480" height="212" frameBorder="0"
+                    class="giphy-embed" allowFullScreen></iframe>
+                <p></p>
+
+            </section>
+            <section class="signupbody d-flex flex-column justify-content-start align-items-start">
+                <form action="/verifyuser" method="post"
+                    class="signupform d-flex flex-column justify-content-start align-items-center">
+
+                    <section class="formtop d-flex flex-row justify-content-center align-items-center">
+                        <section class="formleft d-flex flex-column justify-content-start align-items-center">
+
+                            <input type="text" name="username" id="user" class="formelement" placeholder="Patient ID"
+                                autocomplete="off">
+
+                            <input type="text" name="firstname" id="firstname" class="formelement"
+                                placeholder="First name" autocomplete="off">
+
+                            <input type="number" name="age" id="age" class="formelement"
+                                placeholder="Age" autocomplete="off" min="1" max="99">
+
+
+                            <input type="email" name="email" id="email" class="formelement" placeholder="E-mail"
+                                autocomplete="off">
+
+                                <input type="date" name="dob" id="dob" class="formelement" placeholder="Date of birth"
+                                autocomplete="off">
+
+                                <input type="text" name="occupation" id="occupation" class="formelement" placeholder="Occupation"
+                                autocomplete="off">
+                        </section>
+
+                        <section class="formright d-flex flex-column justify-content-start align-items-center">
+
+
+                            <input type="text" name="username" id="user" class="formelement"
+                                placeholder="Appointment ID" autocomplete="off">
+
+                            <input type="text" name="lastname" id="lastname" class="formelement" placeholder="Last name"
+                                autocomplete="off">
+
+                            <select name="sex" id="sex" class="formelement">
+                                <option value="Female">Female</option>
+                                <option value="Male">Male</option>
+                                <option value="Lesbian">Lesbian</option>
+                                <option value="Gay">Gay</option>
+                                <option value="Bisexual">Bisexual</option>
+                                <option value="Transgender">Transgender</option>
+                                <option value="Queer">Queer</option>
+                                <option value="Private">Rather not say</option>
+                            </select>
+
+                            <input type="password" name="password" id="password" class="formelement"
+                                placeholder="Password" autocomplete="off">
+
+                            <input type="text" name="disease" id="disease" class="formelement" placeholder="Underlying disease"
+                                autocomplete="off">
+
+                        </section>
+                    </section>
+
+
+
+                    <button class="btn btn-dark" id="signupbutton">Signup</button>
+                </form>
+            </section>
+        </section>
+    </section>
+
+</body>
+
+</html>
