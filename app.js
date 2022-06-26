@@ -70,6 +70,12 @@ app.post('/home', (req, res) => {
     
 })
 
+app.get('/home', (req, res) => {
+
+        res.render('home')
+    
+})
+
 
 app.post('/verifyuser', (req, res) => {
 
