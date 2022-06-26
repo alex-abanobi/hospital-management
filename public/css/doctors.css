@@ -1,0 +1,96 @@
+*{
+    /* font-family: 'Raleway', sans-serif; */
+    font-family: 'Nunito', sans-serif;
+    /* border: 1px solid red; */
+    box-sizing: border-box;
+}
+
+body,html{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+}
+
+.main{
+    height: auto;
+    width: 100%;
+}
+
+.maincontent{
+    /* border: 1px solid black; */
+    box-shadow: 2px 2px 10px #eaeaea;
+    height: auto;
+    width: 40%;
+}
+
+.logo{
+    width: 35%;
+    height: 55%;
+    margin-right: 0.5rem;
+}
+
+.doctorshead{
+    padding: 1rem 1rem;
+    width: 100%;
+    height: 15rem;
+}
+
+.doctorsbody{
+    width: 100%;
+    height: auto;
+    padding: 1rem;
+}
+
+
+.doctorstop{
+    height: auto;
+    width: 100%;
+}
+
+.doctorsleft{
+    height: auto;
+    width: 50%;
+}
+
+.doctorsright{
+    height: auto;
+    width: 50%;
+}
+
+.giphy-embed{
+    width: 60%;
+    height: 40%;
+}
+
+.doctor{
+    width: 90%;
+    height: 19rem;
+    background-color: #415a77;
+    padding: 0.5rem 0.5rem;
+    border-radius: 2rem;
+    margin-bottom: 4rem;
+}
+
+.doctor:hover{
+    box-shadow: 2px 2px 10px #414141;
+    background-color: #ff9f1c;
+    transition: box-shadow 0.5s;
+
+}
+
+.doctorpic{
+    width: 90%;
+    height: 13rem;
+    margin-bottom: 1rem;
+}
+
+.doctorname{
+    font-weight: bold;
+    color: white;
+}
+
+.doctorspecialty{
+    font-style: italic;
+    color: white;
+}

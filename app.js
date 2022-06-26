@@ -8,15 +8,15 @@ const express = require('express'); // here I am requiring the express that I ha
 const path = require('path'); // here I am requiring path. but path in inbuilt so it doesn't need to be installed along with the other npm install
 const mongoose = require('mongoose') // in this place i am requiring the mongoose that i have initially installed.
 const methodOverride = require('method-override');
-//const Campground = require('./models/campground') // here i am requiring a certain file (class) called campground.js in the models directory
+const Patient = require('./models/patient') // here i am requiring a certain file (class) called campground.js in the models directory
     // that campground file exports a mongoose schema class. more or less like returns that mongoose schema class
-let loginresult = ""
+const { v4: uuidv4 } = require('uuid');
 mongoose.connect('mongodb://localhost:27017/zankli-pp', { // create and connect to this database
     useNewUrlParser: true,
     useUnifiedTopology: true
 }); // here i am creating a database called yelp-camp and i am setting some mongoose options to ease operation and avoid errors
 
-
+// npm install react@latest react-dom@latest
 
 const db = mongoose.connection; // here i have created a connection to mongoose and stored it in the variable called db
 
@@ -46,8 +46,14 @@ app.get('/', (req, res) => {
     res.render('login', { loginresult })
 })
 
+app.get('/doctors', (req, res) => {
+    res.render('doctors')
+})
+
 app.get('/signup', (req, res) => {
-    res.render('signup')
+    let patientid = uuidv4(); // ⇨ '1b9d6bcd-bbfd-4b2d-9b5d-ab8dfbbd4bed'
+    patientid = patientid.substring(0,8) 
+    res.render('signup', {patientid})
 })
 
 app.post('/home', (req, res) => {

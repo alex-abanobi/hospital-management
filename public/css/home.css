@@ -103,6 +103,8 @@ body,html{
     /* text-decoration: underline; */
     border-bottom: 1px solid black;
     text-align: center;
+    text-decoration: none;
+    color: black    ;
 }
 .links:hover{
     color: rgb(54, 54, 54);
