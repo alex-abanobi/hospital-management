@@ -17,6 +17,8 @@ mongoose.connect('mongodb://localhost:27017/zankli-pp', { // create and connect 
 }); // here i am creating a database called yelp-camp and i am setting some mongoose options to ease operation and avoid errors
 let patientid = uuidv4(); // ⇨ '1b9d6bcd-bbfd-4b2d-9b5d-ab8dfbbd4bed'
 let appointmentid = uuidv4(); // ⇨ '1b9d6bcd-bbfd-4b2d-9b5d-ab8dfbbd4bed'
+appointmentid = appointmentid.substring(0, 8)
+patientid = patientid.substring(0, 8)
 let doctors = ['Diem Truong', 'Monique Rivera', 'Tiffany Randazzo', 'Dr. Dimitri Kessaris', 'Dr. Sourab Choudhury', 'Dr. Lyubov Avshalumova', 'Dr. Dina Began', 'Dr. Isaac Namdar', 'Dr. David Culang', 'Dr. George Castro', 'Dr. Babar Rao', 'Dr. George Castro', 'Dr. Babar Rao', 'Matthew Pabis', 'Dr. Franklin Lowe', 'Dr. Marina Marcu', 'Dr. Sanjosh Singh', 'Dr. Vathani Packianatha', 'Lydia Wu', 'Dr. Doron Katz', 'Dr. Shanna Levine', 'Dr. Kamran Jafri', 'Dr. David Volpi']
 
 
@@ -59,7 +61,6 @@ app.get('/doctors', (req, res) => {
 })
 
 app.get('/signup', (req, res) => {
-    patientid = patientid.substring(0, 8)
     res.render('signup', { patientid })
 })
 
@@ -115,8 +116,7 @@ app.post('/bookingconfirmed', (req, res) => {
 })
 
 app.get('/appointment', (req, res) => {
-    appointmentid = appointmentid.substring(0, 8)
-    patientid = patientid.substring(0, 8)
+
     res.render('appointment', { appointmentid, patientid, doctors })
     // for (const doctor of doctors){
     //     console.log(doctor);
