@@ -76,6 +76,23 @@ app.get('/home', (req, res) => {
     
 })
 
+app.get('/about', (req, res) => {
+
+    res.render('about')
+
+})
+
+app.get('/emergency', (req, res) => {
+
+    res.render('emergency')
+
+})
+
+app.get('/pharmacy', (req, res) => {
+
+    res.render('pharmacy')
+
+})
 
 app.post('/verifyuser', (req, res) => {
 
