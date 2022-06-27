@@ -128,7 +128,16 @@ body,html{
     width: 50%;
     height: 50%;
     font-size: 1.5rem;
-    background-color: rebeccapurple;
+    background-color: black;
+    text-align: center;
+}
+
+.appointmentbutton1:hover{
+    color: black;
+    background-color: white;
+    border: none;
+    box-shadow: 1px 1px 2px gray;
+    transition: background-color 0.5s;
 }
 
 .servicesdropdown-active{
@@ -143,7 +152,6 @@ body,html{
     height: 0;
     z-index: 100;
     background-color: white;
-    box-shadow: 1px 1px 2px #eaeaea;
     /* transition: top 2s; */
     /* border: 1px solid rebeccapurple; */
     opacity: 0;

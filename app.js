@@ -9,12 +9,20 @@ const path = require('path'); // here I am requiring path. but path in inbuilt s
 const mongoose = require('mongoose') // in this place i am requiring the mongoose that i have initially installed.
 const methodOverride = require('method-override');
 const Patient = require('./models/patient') // here i am requiring a certain file (class) called campground.js in the models directory
-    // that campground file exports a mongoose schema class. more or less like returns that mongoose schema class
+// that campground file exports a mongoose schema class. more or less like returns that mongoose schema class
 const { v4: uuidv4 } = require('uuid');
 mongoose.connect('mongodb://localhost:27017/zankli-pp', { // create and connect to this database
     useNewUrlParser: true,
     useUnifiedTopology: true
 }); // here i am creating a database called yelp-camp and i am setting some mongoose options to ease operation and avoid errors
+let patientid = uuidv4(); // ⇨ '1b9d6bcd-bbfd-4b2d-9b5d-ab8dfbbd4bed'
+let appointmentid = uuidv4(); // ⇨ '1b9d6bcd-bbfd-4b2d-9b5d-ab8dfbbd4bed'
+let doctors = ['Diem Truong', 'Monique Rivera', 'Tiffany Randazzo', 'Dr. Dimitri Kessaris', 'Dr. Sourab Choudhury', 'Dr. Lyubov Avshalumova', 'Dr. Dina Began', 'Dr. Isaac Namdar', 'Dr. David Culang', 'Dr. George Castro', 'Dr. Babar Rao', 'Dr. George Castro', 'Dr. Babar Rao', 'Matthew Pabis', 'Dr. Franklin Lowe', 'Dr. Marina Marcu', 'Dr. Sanjosh Singh', 'Dr. Vathani Packianatha', 'Lydia Wu', 'Dr. Doron Katz', 'Dr. Shanna Levine', 'Dr. Kamran Jafri', 'Dr. David Volpi']
+
+
+const yourFunction = async () => {
+    setTimeout(2000);
+};
 
 // npm install react@latest react-dom@latest
 
@@ -51,29 +59,28 @@ app.get('/doctors', (req, res) => {
 })
 
 app.get('/signup', (req, res) => {
-    let patientid = uuidv4(); // ⇨ '1b9d6bcd-bbfd-4b2d-9b5d-ab8dfbbd4bed'
-    patientid = patientid.substring(0,8) 
-    res.render('signup', {patientid})
+    patientid = patientid.substring(0, 8)
+    res.render('signup', { patientid })
 })
 
 app.post('/home', (req, res) => {
 
-    if (req.body.username == "sadiya@gmail.com" && req.body.password == "zankli123"){
+    if (req.body.username == "sadiya@gmail.com" && req.body.password == "zankli123") {
         loginresult = ""
         res.render('home', { loginresult })
     }
-    else{
+    else {
         loginresult = "Wrong username or password"
         res.redirect('/')
-      
-    } 
-    
+
+    }
+
 })
 
 app.get('/home', (req, res) => {
 
-        res.render('home')
-    
+    res.render('home')
+
 })
 
 app.get('/about', (req, res) => {
@@ -88,6 +95,35 @@ app.get('/emergency', (req, res) => {
 
 })
 
+
+// async function asyncCall() {
+//     console.log('calling');
+//     const result = await setTimeout(() => {
+//     }, "2000");
+//     console.log(result);
+//     // expected output: "resolved"
+// }
+
+app.post('/bookingconfirmed', (req, res) => {
+    let doc = req.body.doctorchosen
+    let appointmentdate = req.body.appointmentdate
+    // console.log(req.body)
+
+    res.render('bookingconfirmed', { appointmentid, patientid,  doc, appointmentdate})
+
+
+})
+
+app.get('/appointment', (req, res) => {
+    appointmentid = appointmentid.substring(0, 8)
+    patientid = patientid.substring(0, 8)
+    res.render('appointment', { appointmentid, patientid, doctors })
+    // for (const doctor of doctors){
+    //     console.log(doctor);
+    // }
+
+})
+
 app.get('/pharmacy', (req, res) => {
 
     res.render('pharmacy')
@@ -96,16 +132,16 @@ app.get('/pharmacy', (req, res) => {
 
 app.post('/verifyuser', (req, res) => {
 
-    if (req.body.email == "sadiya@gmail.com" && req.body.password == "zankli123"){
+    if (req.body.email == "sadiya@gmail.com" && req.body.password == "zankli123") {
         loginresult = ""
         res.render('home', { loginresult })
     }
-    else{
+    else {
         loginresult = "Wrong username or password"
         res.redirect('/')
-      
-    } 
-    
+
+    }
+
 })
 
 
